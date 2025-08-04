@@ -1,0 +1,19 @@
+###############################################
+Transverse Analysis
+###############################################
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Contents:
+
+    slab_lane_xbeam.rst
+    load_transfer_loc.rst
+    reactions.rst
+    transverse_load_combinations.rst
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

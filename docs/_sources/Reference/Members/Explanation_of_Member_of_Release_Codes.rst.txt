@@ -1,0 +1,13 @@
+Explanation of Member End Release Codes
+=========================================
+
+    Coding is either 3 digit [RZ,TY,TX]  or "Y" or "N"
+
+    Axial force is always release in stringers unless use numeric release coding.
+
+    * blank is default "Y"   --> [101]
+   
+    * "Y" Release Moment [hinge] --> [101]
+   
+    * "N" Don't Release Moment [continuous] --> [001]
+

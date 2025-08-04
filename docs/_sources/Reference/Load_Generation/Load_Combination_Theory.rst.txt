@@ -1,0 +1,54 @@
+Load Combination Theory
+===============================
+
+The envelope data used in a load combination is computed using the dead load
+data set collections, and the Truck-Path envelopes.
+
+Terminology
+------------------
+
+1. **Forces**
+
+    One Data Set
+
+    :DSC: One Data Set Collection
+          = The collection of all data sets for all points of interest in the analysis.
+    :DLC: DSC for final effective dead loads
+    :SDLC: DSC for superimposed dead loads
+    :PSC: DSC for Prestress secondary loads
+    :TPE: DSC for each Truck-Path envelope. One truck running on one path (lane).
+
+2. **Factors**
+
+    :AFM:   :ref:`Truck Group Definition`:AFM = Axle Force Multiplier (TruckGroupDef)
+    :LLR:   :ref:`Lane Load Reduction Definition`:LLR = Lane Load Reduction (LaneLoadReductionDef)
+    :IF:    :ref:`Load Combination Definition`:IF = Impact Factor (LoadCombinationDef)
+    :UDLF:  :ref:`Rating Factors for LFR`:UDLF = Ultimate Dead Load Factor (RatingFactors)
+    :USDLF: :ref:`Rating Factors for LFR`:USDLF = Ultimate Dead Load Factor (RatingFactors)
+    :UPSF:  :ref:`Rating Factors for LFR`:UPSF = Ultimate Prestress Factor (RatingFactors)
+    :ULLF:  :ref:`Truck Group Definition`:ULLF = Ultimate Live Load Factor (RatingFactors)
+
+    These factors are not used to factor the forces but included here for reference purposes.
+
+    :MSRF: = Moment Strength Reduction Factor (RatingFactors)
+    :SSRF: = Shear Strength Reduction Factor (RatingFactors)
+    :ASRF: = Axial Strength Reduction Factor (RatingFactors)
+
+3. **Combinations**
+
+    The forces used when rating a member are created by combining the following
+    force data sets with the appropriate factors.
+
+    The term `WCTPE` refers to the worst case live load forces that result when
+    scanning all of the possible truck and lane configurations specified by the
+    Lane Group and Truck Group combination. For example, all of the truck loading
+    configurations shown in the
+    :ref:`Example of Lane Loading Combinations Using LCR` would be scanned and
+    the most extreme value for the requested force type (Max Moment, Max Shear, etc.)
+    would be saved as the `WCTPE`.
+    There are in fact two `WCTPE`'s calculated, one for the Numerator and one for
+    the Denominator portions of the equations.  Which trucks contribute to which
+    is defined in the :ref:`Truck Group definition` table.
+
+
+

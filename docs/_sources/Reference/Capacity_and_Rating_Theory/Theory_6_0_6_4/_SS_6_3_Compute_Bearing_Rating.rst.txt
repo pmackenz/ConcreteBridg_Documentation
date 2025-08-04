@@ -1,0 +1,6 @@
+[SS-6.3] Compute Bearing Rating
+======================================================
+
+.. image:: ../../../image/ebd_Ebd216.png
+    :alt: image/ebd_Ebd216.png
+

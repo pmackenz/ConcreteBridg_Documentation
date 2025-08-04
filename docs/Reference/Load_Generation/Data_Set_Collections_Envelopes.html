@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Set Collections ( Envelopes ) &mdash; SteelBridg LRFR 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SteelBridg LRFR
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/index.html">General Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../libraries/index.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../members/index.html">Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../shape_placement/index.html">General Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../steel/index.html">Conventional Steel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ps_cables/index.html">Prestressed Cables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dead_loads/index.html">Dead Loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../live_loads/index.html">Live Loads</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SteelBridg LRFR</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Set Collections ( Envelopes )</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Reference/Load_Generation/Data_Set_Collections_Envelopes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-set-collections-envelopes">
+<h1>Data Set Collections ( Envelopes )<a class="headerlink" href="#data-set-collections-envelopes" title="Link to this heading"></a></h1>
+<p>The number of data set collections required is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>One for each dead load stage</p></li>
+<li><p>One for the superimposed dead load stage</p></li>
+<li><p>One for each truck in each lane in each lane group used in a load combination.</p></li>
+<li><p>Two for each load combination; one for the numerator and one for the denominator part.</p></li>
+</ul>
+</div></blockquote>
+<section id="a-simple-example">
+<h2>A simple Example<a class="headerlink" href="#a-simple-example" title="Link to this heading"></a></h2>
+<p>Assume:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Five member lines that are 200 feet long</p></li>
+<li><p>One hundred truss members</p></li>
+<li><p>One Lane Group with 4 lanes maximum</p></li>
+<li><p>One Truck Group with two different  trucks referenced</p></li>
+<li><p>One Load Combination that uses <span class="xref std std-ref">Lane Group Positioning Methods</span>:<cite>LCR</cite> lane mode.</p></li>
+<li><p>Two dead load stages* No explicit rate locations</p></li>
+</ul>
+</div></blockquote>
+<p>Compute number of <cite>DS</cite> per <cite>DSC</cite>:</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">A<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of <span class="xref std std-ref">Points of Interest</span>:<cite>POIs</cite> per Line members.</p>
+</dd>
+<dt class="field-even">B<span class="colon">:</span></dt>
+<dd class="field-even"><p>Total number of line member <cite>POIs</cite>.</p>
+</dd>
+<dt class="field-odd">C<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of <cite>POIs</cite> for truss members.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Compute number of load cases:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}(two~deal~load) + (one~superimposed~dead~load) + {} \\\end{split}\\\begin{split}(8~unfactored~truck~loads,~one~for~each~truck~on~each~possible~path) + {} \\\end{split}\\(two~for~the~one~load~combination,~denominator~and~numerator~parts) = 13\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[Total~number~of~DS~collected~for~all~load~cases = 605 * 13 = 7865\]</div>
+<p>Storage requirements ( approximate):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Dead~loads = 40~bytes~per~DS~and~Live~loads = 96~bytes~per~DS \\
+(605 * 40 * 3 ) + ( 605 * 96 * 9) =  595,320 ~bytes.\end{split}\]</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Peter Mackenzie &amp; Alan Gordon.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

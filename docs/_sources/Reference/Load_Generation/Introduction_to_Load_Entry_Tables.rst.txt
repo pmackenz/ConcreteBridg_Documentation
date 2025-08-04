@@ -1,0 +1,83 @@
+Introduction to Load Entry Tables
+======================================================
+
+
+There are eleven data tables that are used to define the non gravity
+loads on a model.  Read the discussion on load
+:ref:`Load Combination Theory` to see how and when the data specified
+in the following tables are used.
+
+:ref:`Dead Load Definition`
+
+    Use this table to specify nodal or member loads for any dead load stage.
+
+:ref:`Superimposed Dead Load Definition`
+
+    Use this table to specify nodal or member loads for the superimposed dead load stage.
+
+:ref:`Live Load Definition`
+
+    A `Truck` can have static loads associated with it.
+    These can be either nodal or member forces that are applied to the
+    model with the moving loads.
+
+:ref:`Truck Definition`
+
+    BRIDG uses the word `Truck` quite loosely.
+    It is used to reference a collection of static and moving loads.
+    This table is used to define the axle loads and their spacing.
+    It also is used to define the lane load forces.
+    This entry in addition to the :ref:`Live Load Definition`
+    create a complete set of loadings that can be referenced by one name,
+    i.e., the Truck Name.
+
+:ref:`Live Load Envelope Definition`
+
+    BRIDG positions the movable portion of a Truck's loads along a path in
+    discrete iterations.  For each iteration, the forces throughout the
+    bridge are scanned and a set of envelopes are generated.
+    This table is used to define how the moving loads are incrementally positioned.
+
+:ref:`Truck Group Definition`
+
+    This table has a dual purpose. It is used to create a collection of one
+    or more trucks that are used in conjunction with the
+    :ref:`Lane Group Definition` to specify what trucks to use when generating
+    a load combination envelope.
+    It also is used to specify the **axle force multiplier** and
+    **ultimate load factors** to apply to the truck's loads when used in
+    the specified group.
+
+    There is also the Numerator/Denominator switch that tells the program
+    whether the loads for this truck in the group will be applied to the
+    Numerator or Denominator of the rating equation.
+    BRIDG keeps these loads separate for when the rating equation requires
+    that not all of the live loads be summed together.
+
+:ref:`Lane Group Definition`
+
+    Except when the special sequenced truck motion method is specified in the
+    :ref:`Live Load Envelope Definition` table, the range of positioning
+    the truck transverse to the bridge is specified using this table.
+
+:ref:`Lane Load Reduction Definition`
+
+    This table defines the factors that are applied to the truck loads when
+    one or more trucks are combined using the :ref:`Truck Group` and :ref:`Lane Group` combination.
+
+:ref:`Rating Factors for LFR` and :ref:`Rating Factors for LRFR`
+
+    This table defines the ultimate dead load factors and the strength reduction factors.
+
+:ref:`Rate Location`
+
+    Except for non-line members, the user needs to specify where the program will
+    compute capacities and rate the structure.  Non-line members are always
+    analyzed at their critical locations.
+
+:ref:`Load Combination Definition`
+
+    This is where all the entry tables listed above come together to form a bridge
+    loading condition.  Only load combinations generate member capacities and
+    ratings.
+

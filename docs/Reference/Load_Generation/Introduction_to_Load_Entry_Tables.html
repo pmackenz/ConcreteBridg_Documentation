@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Load Entry Tables &mdash; SteelBridg LRFR 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SteelBridg LRFR
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/index.html">General Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../libraries/index.html">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../members/index.html">Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../shape_placement/index.html">General Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../steel/index.html">Conventional Steel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ps_cables/index.html">Prestressed Cables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dead_loads/index.html">Dead Loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../live_loads/index.html">Live Loads</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SteelBridg LRFR</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction to Load Entry Tables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Reference/Load_Generation/Introduction_to_Load_Entry_Tables.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction-to-load-entry-tables">
+<h1>Introduction to Load Entry Tables<a class="headerlink" href="#introduction-to-load-entry-tables" title="Link to this heading"></a></h1>
+<p>There are eleven data tables that are used to define the non gravity
+loads on a model.  Read the discussion on load
+<span class="xref std std-ref">Load Combination Theory</span> to see how and when the data specified
+in the following tables are used.</p>
+<p><span class="xref std std-ref">Dead Load Definition</span></p>
+<blockquote>
+<div><p>Use this table to specify nodal or member loads for any dead load stage.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Superimposed Dead Load Definition</span></p>
+<blockquote>
+<div><p>Use this table to specify nodal or member loads for the superimposed dead load stage.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Live Load Definition</span></p>
+<blockquote>
+<div><p>A <cite>Truck</cite> can have static loads associated with it.
+These can be either nodal or member forces that are applied to the
+model with the moving loads.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Truck Definition</span></p>
+<blockquote>
+<div><p>BRIDG uses the word <cite>Truck</cite> quite loosely.
+It is used to reference a collection of static and moving loads.
+This table is used to define the axle loads and their spacing.
+It also is used to define the lane load forces.
+This entry in addition to the <span class="xref std std-ref">Live Load Definition</span>
+create a complete set of loadings that can be referenced by one name,
+i.e., the Truck Name.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Live Load Envelope Definition</span></p>
+<blockquote>
+<div><p>BRIDG positions the movable portion of a Truck’s loads along a path in
+discrete iterations.  For each iteration, the forces throughout the
+bridge are scanned and a set of envelopes are generated.
+This table is used to define how the moving loads are incrementally positioned.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Truck Group Definition</span></p>
+<blockquote>
+<div><p>This table has a dual purpose. It is used to create a collection of one
+or more trucks that are used in conjunction with the
+<span class="xref std std-ref">Lane Group Definition</span> to specify what trucks to use when generating
+a load combination envelope.
+It also is used to specify the <strong>axle force multiplier</strong> and
+<strong>ultimate load factors</strong> to apply to the truck’s loads when used in
+the specified group.</p>
+<p>There is also the Numerator/Denominator switch that tells the program
+whether the loads for this truck in the group will be applied to the
+Numerator or Denominator of the rating equation.
+BRIDG keeps these loads separate for when the rating equation requires
+that not all of the live loads be summed together.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Lane Group Definition</span></p>
+<blockquote>
+<div><p>Except when the special sequenced truck motion method is specified in the
+<span class="xref std std-ref">Live Load Envelope Definition</span> table, the range of positioning
+the truck transverse to the bridge is specified using this table.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Lane Load Reduction Definition</span></p>
+<blockquote>
+<div><p>This table defines the factors that are applied to the truck loads when
+one or more trucks are combined using the <span class="xref std std-ref">Truck Group</span> and <span class="xref std std-ref">Lane Group</span> combination.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Rating Factors for LFR</span> and <span class="xref std std-ref">Rating Factors for LRFR</span></p>
+<blockquote>
+<div><p>This table defines the ultimate dead load factors and the strength reduction factors.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Rate Location</span></p>
+<blockquote>
+<div><p>Except for non-line members, the user needs to specify where the program will
+compute capacities and rate the structure.  Non-line members are always
+analyzed at their critical locations.</p>
+</div></blockquote>
+<p><span class="xref std std-ref">Load Combination Definition</span></p>
+<blockquote>
+<div><p>This is where all the entry tables listed above come together to form a bridge
+loading condition.  Only load combinations generate member capacities and
+ratings.</p>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Peter Mackenzie &amp; Alan Gordon.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

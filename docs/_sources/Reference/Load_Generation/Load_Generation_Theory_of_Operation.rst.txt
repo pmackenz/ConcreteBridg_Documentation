@@ -1,0 +1,8 @@
+Load Generation Theory of Operation
+======================================================
+
+See also: :ref:`Load Generation Data Sets`
+
+
+.. image:: ../../image/ebd_Ebd53.png
+    :alt: image/ebd_Ebd53.png

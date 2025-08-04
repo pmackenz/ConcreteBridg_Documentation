@@ -1,0 +1,20 @@
+###############################################
+Conventional Steel
+###############################################
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Contents:
+
+    shear_steel.rst
+    top_steel_a.rst
+    top_steel_b.rst
+    bottom_steel_a.rst
+    bottom_steel_b.rst
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

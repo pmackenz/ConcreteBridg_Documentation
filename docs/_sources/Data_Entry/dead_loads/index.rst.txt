@@ -1,0 +1,18 @@
+###############################################
+Dead Loads
+###############################################
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Contents:
+
+    dead_loads.rst
+    member_dead_loads.rst
+    dead_load_distribution.rst
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

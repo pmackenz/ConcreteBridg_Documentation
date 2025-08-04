@@ -1,0 +1,17 @@
+##################
+Data Entry
+##################
+
+.. toctree::
+    :maxdepth: 3
+
+    Data_Entry/general/index.rst
+    Data_Entry/libraries/index.rst
+    Data_Entry/members/index.rst
+    Data_Entry/shape_placement/index.rst
+    Data_Entry/steel/index.rst
+    Data_Entry/ps_cables/index.rst
+    Data_Entry/dead_loads/index.rst
+    Data_Entry/live_loads/index.rst
+    Data_Entry/transvers/index.rst
+

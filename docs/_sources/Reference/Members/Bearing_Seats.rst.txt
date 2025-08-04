@@ -1,0 +1,5 @@
+Bearing Seats
+=====================================
+
+.. image:: ../../image/bearing_seats.png
+    :alt: image/bearing_seats.png
