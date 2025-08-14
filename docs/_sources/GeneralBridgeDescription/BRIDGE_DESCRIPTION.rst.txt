@@ -1,0 +1,35 @@
+Bridge Description (Card 0001)
+===============================
+PURPOSE:
+--------
+Provide descriptive information about the bridge. These comments are not used in the rating process but are
+used by the report generator.
+
+DEFINITIONS:
+------------
+KEY WORD
+^^^^^^^^
+The key word must be entered left justified in the 4 character field and be in upper case.
+
+    | BNUM:   Bridge Number
+    | DATE:   Year bridge was built and other pertinent date information.
+    | ENGR:   Design Engineer
+    | RATER:  Enter name of company, date, and person rating bridge.
+    | NAME:   Bridge Name
+    | LOC:    Bridge location, include route/hwy number, milepost, and descriptive location.
+    | ADTV:   Average Daily Traffic Reports, and Count Date if supplied.
+    | FOOT1:  Footing that appears on bottom of report. Line 1. Typically company name.
+    | FOOT2:  Footing that appears on bottom of report. Line 2. Typically company type.
+    | DESC:   Any other descriptive information that should be included with the computer
+    database info.
+
+Standard uses for DESC card are:
+--------------------------------
+• Description of bridge structural system. Example: Concrete Box Girder.
+• Type of reinforcing. Example: Conventional Reinforcing.
+• Latest inspection report date. Example: Latest inspection report 10/31/90.
+• Statement specifying bridge wearing surface.
+
+A maximum of 10 **DESC** cards may be entered. If there is a need to use more than one "DESC" card to
+complete a comment, use another and indent the remaining text. All "DESC" cards will be printed on the
+report summary page in the order enter.

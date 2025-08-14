@@ -1,0 +1,8 @@
+Conversion of Older BDF files to Latest Version
+================================================
+
+BRIDG has been backward compatible since version 8.2. The current version can read any BDF file since
+then, but it always generates the most recent file format. Thus, the only supported method for conversion of
+BDF files is to read in an older version file and then generate an "Input Only" report file. Rename the report
+file from a RPT to a BDF and you now have a reliable conversion. Be careful to read any warnings or error
+messages that might have been displayed during the conversion. These messages are saved in the .LOG file.

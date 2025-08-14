@@ -1,0 +1,4 @@
+General Comments (Card 0000)
+============================
+This data block is not used by BRIDG, but is reserved for comments and notes about the program. User
+modifications to this area will not be reflected in the RPT file or saved with the BDF file.

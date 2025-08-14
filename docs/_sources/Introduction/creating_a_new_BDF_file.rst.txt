@@ -1,0 +1,25 @@
+How to create a new BDF file
+===============================
+
+The best way to create a new BDF file is to make a copy of an existing file that most closely matches the new
+bridge configuration. If the file is from an older version of BRIDG then convert the file to the current revision
+level before editing (See Conversion of BDF files). As a last resort, you can make a copy of the
+TEMPLATE.BDF file. This file is completely blank except for some girder shapes, and truck configurations.
+
+The TEMPLATE.BDF file contains all of the BRIDG data blocks, but you only need to include those required
+for your bridge. Files that have been converted from an older version will also have most of the BRIDG data
+blocks. A data block with no data entry lines is allowed, but they do clutter up the input file.
+
+The BDF input file is a simple text file that you edit with any normal text editor. Using a Word processor is not
+advised since these programs tend to include many hidden and special codes in the file that will upset
+BRIDG. Also, the column positions in the BDF file are very important and most user input errors are a result of
+not placing a value in the correct column. The best editor we have found for BRIDG files is Notepad that
+comes standard with all version of Windows.
+
+Rules for editing the BDF file:
+
+• Do not edit the first line that states the revision level of the file.
+• Do not cut and paste sections from files that have different revision levels.
+• **DO NOT USE TABS**. Instruct your editor to expand tabs to spaces.
+• Be careful not to move the data field markers. A good check is to produce an "input only" report and review it.
+• Do have fun.

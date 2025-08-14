@@ -1,0 +1,11 @@
+Introduction
+==============
+
+Bridg Version 10.9 builds on previous versions of Bridg. It adds the capability to rate concrete structures using
+the Load Resistance Factor method per the latest Manual for Bridge Evaluation (MBE). It also maintains
+capability of rating structures using the Load Factor Method. Engineers, who have used previous versions of
+the software, should not see much of a change in the input. Few cards were added to capture the change in
+the way Live Load Factors are calculated.
+
+This manual is intended to complement the input file. Most of the data input are described within the cards;
+hence, not all are described here.
